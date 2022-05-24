@@ -898,7 +898,7 @@ public class AnnotatedColumn {
 		}
 		final String propertyName = inferredData.getPropertyName();
 		column.setPropertyName(
-				BinderHelper.getRelativePath( propertyHolder, propertyName )
+				BinderHelper.getRelativePathRecursively(propertyHolder, propertyName)
 		);
 		column.setPropertyHolder( propertyHolder );
 		column.setJoins( secondaryTables );

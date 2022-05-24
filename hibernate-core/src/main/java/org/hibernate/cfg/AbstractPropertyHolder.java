@@ -86,6 +86,10 @@ public abstract class AbstractPropertyHolder implements PropertyHolder {
 	protected abstract AttributeConversionInfo locateAttributeConversionInfo(XProperty property);
 	protected abstract AttributeConversionInfo locateAttributeConversionInfo(String path);
 
+	public AbstractPropertyHolder getParent() {
+		return this.parent;
+	}
+
 	@Override
 	public ConverterDescriptor resolveAttributeConverterDescriptor(XProperty property) {
 		AttributeConversionInfo info = locateAttributeConversionInfo( property );
